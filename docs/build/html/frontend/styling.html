@@ -1,0 +1,1097 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styling &mdash; AI GUARD 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Permissions" href="permissions.html" />
+    <link rel="prev" title="State Management" href="state_management.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AI GUARD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/overview.html">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/overview.html#what-is-ai-guard">What is AI-Guard?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/overview.html#motivation-and-real-world-problem-it-solves">Motivation and real-world problem it solves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/overview.html#key-benefits">Key benefits</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/project_scope.html">Project Scope</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/project_scope.html#main-goals">Main goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/project_scope.html#technical-scope">Technical scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/project_scope.html#out-of-scope">Out of scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/project_scope.html#institutions-this-applies-to">Institutions this applies to</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/target_audience.html">Target Audience</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#developers">Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#system-administrators">System Administrators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#security-teams">Security Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#institution-management">Institution Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#end-users">End Users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/high_level_overview.html">High-Level Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/high_level_overview.html#system-flow">System Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/high_level_overview.html#system-components">System Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/high_level_overview.html#client-components">Client Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/high_level_overview.html#backend-components">Backend Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/high_level_overview.html#edge-devices">Edge Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/high_level_overview.html#communication-flow">Communication Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/component_breakdown.html">Component Breakdown</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/component_breakdown.html#client-components">Client Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#enrollment-interface">Enrollment Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#admin-dashboard">Admin Dashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#security-console">Security Console</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/component_breakdown.html#backend-components">Backend Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#rest-api">REST API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#face-detection-service">Face Detection Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#face-recognition-service">Face Recognition Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#notification-service">Notification Service</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/component_breakdown.html#edge-devices">Edge Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#jetson-nano">Jetson Nano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#raspberry-pi">Raspberry Pi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/technologies.html">Technologies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/technologies.html#frontend-technologies">Frontend Technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#react">React</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#tailwindcss">TailwindCSS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#redux">Redux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#react-router">React Router</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/technologies.html#backend-technologies">Backend Technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#fastapi">FastAPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#postgresql">PostgreSQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#supabase">Supabase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#redis">Redis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/technologies.html#ai-ml-technologies">AI/ML Technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#tensorflow">TensorFlow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#mtcnn">MTCNN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#facenet-arcface">FaceNet/ArcFace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#opencv">OpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/technologies.html#devops-infrastructure">DevOps &amp; Infrastructure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#docker">Docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#kubernetes">Kubernetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#helm">Helm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#github-actions">GitHub Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../features/index.html">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../features/face_enrollment.html">Face Enrollment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#enrollment-workflow">Enrollment Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#multi-angle-capture-logic">Multi-angle capture logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#image-quality-factors">Image quality factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#enrollment-management">Enrollment Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../features/face_recognition.html">Face Recognition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_recognition.html#recognition-process">Recognition Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_recognition.html#threshold-logic">Threshold Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_recognition.html#performance-factors">Performance Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_recognition.html#handling-edge-cases">Handling Edge Cases</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../features/alerts.html">Alerts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#alert-types">Alert Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#notification-channels">Notification Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#alert-severity-levels">Alert Severity Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#sample-alert-content">Sample Alert Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#alert-configuration">Alert Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#alert-handling-workflow">Alert Handling Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../features/admin_dashboard.html">Admin Dashboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/admin_dashboard.html#dashboard-overview">Dashboard Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/admin_dashboard.html#key-dashboard-features">Key Dashboard Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#real-time-monitoring">Real-time Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#access-log-review">Access Log Review</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#system-health-monitoring">System Health Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#analytics">Analytics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../features/admin_dashboard.html#dashboard-customization">Dashboard Customization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../features/access_control.html">Access Control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#defined-roles">Defined Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#feature-access-matrix">Feature Access Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#permission-model">Permission Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#access-levels">Access Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#time-based-restrictions">Time-Based Restrictions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#role-management">Role Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_models/index.html">Data Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/datasets.html">Datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/datasets.html#public-datasets">Public Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#labeled-faces-in-the-wild-lfw">Labeled Faces in the Wild (LFW)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#face-detection-data-set-and-benchmark-fddb">Face Detection Data Set and Benchmark (FDDB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#celeba">CelebA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#ms1m-microsoft-1-million-celebs">MS1M (Microsoft 1-Million Celebs)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/datasets.html#custom-datasets">Custom Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#ensam-internal-dataset">ENSAM Internal Dataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#environmental-variations-set">Environmental Variations Set</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/datasets.html#dataset-usage">Dataset Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/datasets.html#data-collection-protocol">Data Collection Protocol</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/augmentation.html">Augmentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#geometric-transformations">Geometric Transformations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#random-rotation">Random Rotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#random-horizontal-flipping">Random Horizontal Flipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#random-cropping">Random Cropping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#perspective-transformations">Perspective Transformations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#photometric-transformations">Photometric Transformations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#brightness-variation">Brightness Variation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#contrast-adjustment">Contrast Adjustment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#gaussian-noise">Gaussian Noise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#color-jittering">Color Jittering</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#occlusion-simulation">Occlusion Simulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#random-rectangular-occlusions">Random Rectangular Occlusions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#face-mask-simulation">Face Mask Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#glasses-simulation">Glasses Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#augmentation-pipeline">Augmentation Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#implementation-details">Implementation Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/model_architecture.html">Model Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_architecture.html#face-detection">Face Detection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_architecture.html#multi-task-cascaded-convolutional-networks-mtcnn">Multi-task Cascaded Convolutional Networks (MTCNN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_architecture.html#alternative-retinaface">Alternative: RetinaFace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_architecture.html#face-recognition">Face Recognition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_architecture.html#facenet-architecture">FaceNet Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_architecture.html#alternative-arcface">Alternative: ArcFace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_architecture.html#model-comparison">Model Comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_architecture.html#implementation-details">Implementation Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/fine_tuning.html">Fine-Tuning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/fine_tuning.html#fine-tuning-workflow">Fine-Tuning Workflow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#data-collection">1. <strong>Data Collection</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#data-curation">2. <strong>Data Curation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#embedding-generation">3. <strong>Embedding Generation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#transfer-learning">4. <strong>Transfer Learning</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#id1">5. <strong>Fine-Tuning</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#evaluation">6. <strong>Evaluation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#deployment">7. <strong>Deployment</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/fine_tuning.html#schedule-and-triggers">Schedule and Triggers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/fine_tuning.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/model_serving.html">Model Serving</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#serving-infrastructure">Serving Infrastructure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#tensorflow-serving">TensorFlow Serving</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#torchserve-alternative">TorchServe (Alternative)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#api-endpoints">API Endpoints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#detection-endpoint">Detection Endpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#recognition-endpoint">Recognition Endpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#end-to-end-endpoint">End-to-End Endpoint</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#serving-optimization">Serving Optimization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#request-batching">Request Batching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#model-optimization">Model Optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#scaling-and-high-availability">Scaling and High Availability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database/tables.html">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#users-table">Users Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#face-embeddings-table">Face Embeddings Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#access-logs-table">Access Logs Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#locations-table">Locations Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#settings-table">Settings Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#alerts-table">Alerts Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#devices-table">Devices Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#data-retention">Data Retention</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/relationships.html">Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#entity-relationship-diagram-erd">Entity Relationship Diagram (ERD)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#key-relationships">Key Relationships</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#users-to-face-embeddings">Users to Face Embeddings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#users-to-access-logs">Users to Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#locations-to-access-logs">Locations to Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#locations-to-devices">Locations to Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#alerts-to-various-entities">Alerts to Various Entities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#admin-users">Admin Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#security-officers">Security Officers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#polymorphic-relationships">Polymorphic Relationships</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#attachments">Attachments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#database-constraints">Database Constraints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#check-constraints">Check Constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#unique-constraints">Unique Constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/data_protection.html">Data Protection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/data_protection.html#embedding-encryption">Embedding Encryption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#aes-256-encryption">AES-256 Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#key-management">Key Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#database-level-encryption">Database-level Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/data_protection.html#gdpr-compliance">GDPR Compliance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#explicit-consent-tracking">Explicit Consent Tracking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#right-to-be-forgotten">Right to be Forgotten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#data-access">Data Access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#purpose-limitation">Purpose Limitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#data-minimization">Data Minimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#audit-logging">Audit Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Frontend</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="structure.html">Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#application-architecture">Application Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#directory-structure">Directory Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#pages">Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#login">Login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#dashboard">Dashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#enrollment">Enrollment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#access-logs">Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#live-monitoring">Live Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#alerts">Alerts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#settings">Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#reports">Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#component-organization">Component Organization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#base-components">Base Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#composite-components">Composite Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#feature-components">Feature Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#layout-components">Layout Components</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="state_management.html">State Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="state_management.html#store-structure">Store Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="state_management.html#redux-toolkit-implementation">Redux Toolkit Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="state_management.html#action-types">Action Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="state_management.html#authentication">Authentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="state_management.html#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="state_management.html#enrollment">Enrollment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="state_management.html#logs">Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="state_management.html#selectors">Selectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="state_management.html#middleware">Middleware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="state_management.html#api-middleware">API Middleware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="state_management.html#websocket-middleware">WebSocket Middleware</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="state_management.html#persistence">Persistence</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Styling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#design-system">Design System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#color-scheme">Color Scheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#typography">Typography</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component-styling">Component Styling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-components">Basic Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#complex-components">Complex Components</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#theme-support">Theme Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#responsive-design">Responsive Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#css-in-js-integration">CSS-in-JS Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#animation">Animation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#permission-model">Permission Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#role-based-access-control">Role-Based Access Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permission-mapping">Permission Mapping</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#permission-hook">Permission Hook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#protected-route-component">Protected Route Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#component-level-permission-control">Component-Level Permission Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#permission-based-navigation">Permission-Based Navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#form-field-permission-control">Form Field Permission Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#access-denied-handling">Access Denied Handling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/authentication.html">Authentication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#login-endpoint">Login Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#token-refresh">Token Refresh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#authentication-middleware">Authentication Middleware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#token-payload-structure">Token Payload Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#two-factor-authentication">Two-Factor Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#logout">Logout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#password-reset">Password Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#security-considerations">Security Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/user_management.html">User Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#create-user">Create User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#get-users">Get Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#get-user">Get User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#update-user">Update User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#delete-user">Delete User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#bulk-user-import">Bulk User Import</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_enrollment.html">Face Enrollment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#enroll-face">Enroll Face</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#get-enrollment-status">Get Enrollment Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#delete-enrollment">Delete Enrollment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#update-enrollment-metadata">Update Enrollment Metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#add-enrollment-image">Add Enrollment Image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html">Security Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#create-user">Create User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#get-users">Get Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#get-user">Get User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#update-user">Update User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#delete-user">Delete User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#bulk-user-import">Bulk User Import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#enroll-face">Enroll Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#get-enrollment-status">Get Enrollment Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#delete-enrollment">Delete Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#update-enrollment-metadata">Update Enrollment Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#add-enrollment-image">Add Enrollment Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#recognize-face">Recognize Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#batch-recognition">Batch Recognition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#recognition-stream">Recognition Stream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#recognition-thresholds">Recognition Thresholds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#recognition-analytics">Recognition Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#access-logs">Access Logs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_recognition.html#get-access-logs">Get Access Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/logs_alerts.html">Logs &amp; Alerts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/logs_alerts.html#access-logs">Access Logs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-access-logs">Get Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-access-log-detail">Get Access Log Detail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-access-log-image">Get Access Log Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#update-access-log-notes">Update Access Log Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#export-access-logs">Export Access Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api/logs_alerts.html#alerts">Alerts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-alerts">Get Alerts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-alert-detail">Get Alert Detail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#acknowledge-alert">Acknowledge Alert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#resolve-alert">Resolve Alert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#create-alert">Create Alert</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/system_settings.html">System Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#get-settings">Get Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#get-setting-by-key">Get Setting by Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#update-setting">Update Setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#update-multiple-settings">Update Multiple Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#reset-settings-to-default">Reset Settings to Default</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/index.html">Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/requirements.html">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/requirements.html#hardware-requirements">Hardware Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/requirements.html#server-components">Server Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/requirements.html#edge-devices">Edge Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/requirements.html#software-requirements">Software Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/requirements.html#server-environment">Server Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/requirements.html#edge-environment">Edge Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/requirements.html#network-requirements">Network Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/options.html">Deployment Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/options.html#local-deployment">Local Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/options.html#cloud-deployment">Cloud Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/options.html#kubernetes-deployment">Kubernetes Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/options.html#edge-device-deployment">Edge Device Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/options.html#jetson-nano-setup">Jetson Nano Setup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../security/data.html">Data Security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../security/data.html#encryption-at-rest">Encryption At Rest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#database-encryption">Database Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#face-embedding-encryption">Face Embedding Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#file-system-encryption">File System Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../security/data.html#encryption-in-transit">Encryption In Transit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#internal-communications">Internal Communications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#external-communications">External Communications</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../security/data.html#data-minimization">Data Minimization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../monitoring/index.html">Monitoring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../monitoring/metrics.html">Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../monitoring/metrics.html#system-metrics">System Metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../monitoring/metrics.html#infrastructure-metrics">Infrastructure Metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../monitoring/metrics.html#application-metrics">Application Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../monitoring/metrics.html#business-metrics">Business Metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../monitoring/metrics.html#recognition-metrics">Recognition Metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../monitoring/metrics.html#access-metrics">Access Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../monitoring/metrics.html#monitoring-dashboard">Monitoring Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../monitoring/metrics.html#prometheus-configuration">Prometheus Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer/index.html">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer/local_setup.html">Local Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#clone-the-repository">Clone the Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#development-environment">Development Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#frontend-development">Frontend Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#backend-development">Backend Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#ml-model-development">ML Model Development</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Glossary &amp; Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/glossary.html">Glossary</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AI GUARD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Frontend</a></li>
+      <li class="breadcrumb-item active">Styling</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/frontend/styling.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="styling">
+<h1>Styling<a class="headerlink" href="#styling" title="Link to this heading"></a></h1>
+<p>The application uses TailwindCSS for styling with a consistent design system.</p>
+<section id="design-system">
+<h2>Design System<a class="headerlink" href="#design-system" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id1">
+<img alt="AI-Guard Design System" src="_static/design-system.png" />
+<figcaption>
+<p><span class="caption-text">Overview of the design system components and colors</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The design system includes:</p>
+<ul class="simple">
+<li><p>Color palette</p></li>
+<li><p>Typography</p></li>
+<li><p>Spacing scale</p></li>
+<li><p>Component styles</p></li>
+<li><p>Animation patterns</p></li>
+<li><p>Responsive breakpoints</p></li>
+<li><p>Accessibility guidelines</p></li>
+</ul>
+</section>
+<section id="color-scheme">
+<h2>Color Scheme<a class="headerlink" href="#color-scheme" title="Link to this heading"></a></h2>
+<p>The application uses a consistent color palette:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">tailwind.config.js color configuration</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">extend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">primary</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="mf">50</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#eef2ff&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">100</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#e0e7ff&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">200</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#c7d2fe&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">300</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#a5b4fc&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">400</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#818cf8&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">500</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#6366f1&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">600</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4f46e5&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">700</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4338ca&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">800</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#3730a3&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">900</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#312e81&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">secondary</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="mf">50</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#f0fdf4&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">100</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#dcfce7&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">200</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#bbf7d0&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">300</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#86efac&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">400</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4ade80&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">500</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#22c55e&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">600</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#16a34a&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">700</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#15803d&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">800</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#166534&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="mf">900</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#14532d&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">alert</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#10b981&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">warning</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#f59e0b&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">danger</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#ef4444&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">info</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#3b82f6&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="typography">
+<h2>Typography<a class="headerlink" href="#typography" title="Link to this heading"></a></h2>
+<p>A consistent type system with defined styles for different text elements:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Typography configuration</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// tailwind.config.js</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">extend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">fontFamily</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">sans</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Inter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sans-serif&#39;</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">mono</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;JetBrains Mono&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;monospace&#39;</span><span class="p">],</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">fontSize</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">xs</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;0.75rem&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1rem&#39;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">        </span><span class="nx">sm</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;0.875rem&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.25rem&#39;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">        </span><span class="nx">base</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;1rem&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.5rem&#39;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">        </span><span class="nx">lg</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;1.125rem&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.75rem&#39;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">        </span><span class="nx">xl</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;1.25rem&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.75rem&#39;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">        </span><span class="s1">&#39;2xl&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;1.5rem&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2rem&#39;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">        </span><span class="s1">&#39;3xl&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;1.875rem&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2.25rem&#39;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">        </span><span class="s1">&#39;4xl&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;2.25rem&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2.5rem&#39;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">        </span><span class="s1">&#39;5xl&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;3rem&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="component-styling">
+<h2>Component Styling<a class="headerlink" href="#component-styling" title="Link to this heading"></a></h2>
+<p>Components are styled using TailwindCSS utility classes:</p>
+<section id="basic-components">
+<h3>Basic Components<a class="headerlink" href="#basic-components" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Button component</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">Button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">children</span><span class="p">,</span><span class="w"> </span><span class="nx">variant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;primary&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;md&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">props</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">variants</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">primary</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bg-primary-600 hover:bg-primary-700 text-white&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">secondary</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bg-gray-200 hover:bg-gray-300 text-gray-800&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">danger</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bg-red-600 hover:bg-red-700 text-white&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">outline</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;border border-primary-600 text-primary-600 hover:bg-primary-50&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ghost</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;text-primary-600 hover:bg-primary-50&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">sizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sm</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;py-1 px-2 text-sm&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">md</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;py-2 px-4 text-base&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">lg</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;py-3 px-6 text-lg&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">button</span>
+<span class="w">      </span><span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="sb">`</span><span class="si">${</span><span class="nx">variants</span><span class="p">[</span><span class="nx">variant</span><span class="p">]</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">sizes</span><span class="p">[</span><span class="nx">size</span><span class="p">]</span><span class="si">}</span><span class="sb"> rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2`</span><span class="p">}</span>
+<span class="w">      </span><span class="p">{</span><span class="na">...props</span><span class="p">}</span>
+<span class="w">    </span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">{</span><span class="nx">children</span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Alert component</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">Alert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">bgColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bg-alert-success&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">warning</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bg-alert-warning&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">danger</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bg-alert-danger&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">info</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bg-alert-info&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}[</span><span class="nx">type</span><span class="p">];</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">icons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">CheckCircleIcon</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;w-5 h-5&quot;</span><span class="w"> </span><span class="p">/&gt;,</span>
+<span class="w">    </span><span class="nx">warning</span><span class="o">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">ExclamationIcon</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;w-5 h-5&quot;</span><span class="w"> </span><span class="p">/&gt;,</span>
+<span class="w">    </span><span class="nx">danger</span><span class="o">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">XCircleIcon</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;w-5 h-5&quot;</span><span class="w"> </span><span class="p">/&gt;,</span>
+<span class="w">    </span><span class="nx">info</span><span class="o">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">InformationCircleIcon</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;w-5 h-5&quot;</span><span class="w"> </span><span class="p">/&gt;,</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="sb">`</span><span class="si">${</span><span class="nx">bgColor</span><span class="si">}</span><span class="sb"> text-white p-4 rounded-md shadow-md flex items-center`</span><span class="p">}&gt;</span>
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;mr-3&quot;</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">icons</span><span class="p">[</span><span class="nx">type</span><span class="p">]}</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">message</span><span class="p">}</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="complex-components">
+<h3>Complex Components<a class="headerlink" href="#complex-components" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">DataTable component</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">DataTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span>
+<span class="w">  </span><span class="nx">columns</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">loading</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">pagination</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">onPageChange</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">onRowClick</span>
+<span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg&quot;</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">{</span><span class="nx">loading</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;absolute inset-0 flex items-center justify-center bg-white bg-opacity-70 z-10&quot;</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;</span><span class="nt">Spinner</span><span class="w"> </span><span class="na">size</span><span class="o">=</span><span class="s">&quot;lg&quot;</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">)}</span>
+
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">table</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;min-w-full divide-y divide-gray-300&quot;</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">thead</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;bg-gray-50&quot;</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">{</span><span class="nx">columns</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">column</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">              </span><span class="p">&lt;</span><span class="nt">th</span>
+<span class="w">                </span><span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">column</span><span class="p">.</span><span class="nx">key</span><span class="p">}</span>
+<span class="w">                </span><span class="na">scope</span><span class="o">=</span><span class="s">&quot;col&quot;</span>
+<span class="w">                </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;px-3 py-3.5 text-left text-sm font-semibold text-gray-900&quot;</span>
+<span class="w">              </span><span class="p">&gt;</span>
+<span class="w">                </span><span class="p">{</span><span class="nx">column</span><span class="p">.</span><span class="nx">header</span><span class="p">}</span>
+<span class="w">              </span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">))}</span>
+<span class="w">          </span><span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">tbody</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;divide-y divide-gray-200 bg-white&quot;</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">{</span><span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="w">              </span><span class="p">&lt;</span><span class="nt">td</span>
+<span class="w">                </span><span class="na">colSpan</span><span class="o">=</span><span class="p">{</span><span class="nx">columns</span><span class="p">.</span><span class="nx">length</span><span class="p">}</span>
+<span class="w">                </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;px-3 py-4 text-sm text-gray-500 text-center&quot;</span>
+<span class="w">              </span><span class="p">&gt;</span>
+<span class="w">                </span><span class="nx">No</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">available</span>
+<span class="w">              </span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span>
+<span class="w">            </span><span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">row</span><span class="p">,</span><span class="w"> </span><span class="nx">rowIndex</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">              </span><span class="p">&lt;</span><span class="nt">tr</span>
+<span class="w">                </span><span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">row</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">rowIndex</span><span class="p">}</span>
+<span class="w">                </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">onRowClick</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">onRowClick</span><span class="p">(</span><span class="nx">row</span><span class="p">)}</span>
+<span class="w">                </span><span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">onRowClick</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;cursor-pointer hover:bg-gray-50&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">}</span>
+<span class="w">              </span><span class="p">&gt;</span>
+<span class="w">                </span><span class="p">{</span><span class="nx">columns</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">column</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">                  </span><span class="p">&lt;</span><span class="nt">td</span>
+<span class="w">                    </span><span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="sb">`</span><span class="si">${</span><span class="nx">row</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">-</span><span class="si">${</span><span class="nx">column</span><span class="p">.</span><span class="nx">key</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span>
+<span class="w">                    </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;whitespace-nowrap px-3 py-4 text-sm text-gray-500&quot;</span>
+<span class="w">                  </span><span class="p">&gt;</span>
+<span class="w">                    </span><span class="p">{</span><span class="nx">column</span><span class="p">.</span><span class="nx">render</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">column</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">row</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">row</span><span class="p">[</span><span class="nx">column</span><span class="p">.</span><span class="nx">key</span><span class="p">]}</span>
+<span class="w">                  </span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="w">                </span><span class="p">))}</span>
+<span class="w">              </span><span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">))</span>
+<span class="w">          </span><span class="p">)}</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+<span class="w">      </span><span class="p">{</span><span class="nx">pagination</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6&quot;</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;flex-1 flex justify-between sm:hidden&quot;</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">button</span>
+<span class="w">              </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">onPageChange</span><span class="p">(</span><span class="nx">pagination</span><span class="p">.</span><span class="nx">page</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)}</span>
+<span class="w">              </span><span class="na">disabled</span><span class="o">=</span><span class="p">{</span><span class="nx">pagination</span><span class="p">.</span><span class="nx">page</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">1</span><span class="p">}</span>
+<span class="w">              </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50&quot;</span>
+<span class="w">            </span><span class="p">&gt;</span>
+<span class="w">              </span><span class="nx">Previous</span>
+<span class="w">            </span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">button</span>
+<span class="w">              </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">onPageChange</span><span class="p">(</span><span class="nx">pagination</span><span class="p">.</span><span class="nx">page</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)}</span>
+<span class="w">              </span><span class="na">disabled</span><span class="o">=</span><span class="p">{</span><span class="nx">pagination</span><span class="p">.</span><span class="nx">page</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">pagination</span><span class="p">.</span><span class="nx">totalPages</span><span class="p">}</span>
+<span class="w">              </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50&quot;</span>
+<span class="w">            </span><span class="p">&gt;</span>
+<span class="w">              </span><span class="nx">Next</span>
+<span class="w">            </span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;hidden sm:flex-1 sm:flex sm:items-center sm:justify-between&quot;</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">              </span><span class="p">&lt;</span><span class="nt">p</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;text-sm text-gray-700&quot;</span><span class="p">&gt;</span>
+<span class="w">                </span><span class="nx">Showing</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">span</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;font-medium&quot;</span><span class="p">&gt;{((</span><span class="nx">pagination</span><span class="p">.</span><span class="nx">page</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">pagination</span><span class="p">.</span><span class="nx">perPage</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">span</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;font-medium&quot;</span><span class="p">&gt;{</span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">pagination</span><span class="p">.</span><span class="nx">page</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">pagination</span><span class="p">.</span><span class="nx">perPage</span><span class="p">,</span><span class="w"> </span><span class="nx">pagination</span><span class="p">.</span><span class="nx">total</span><span class="p">)}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span><span class="w"> </span><span class="k">of</span><span class="p">{</span><span class="s1">&#39; &#39;</span><span class="p">}</span>
+<span class="w">                </span><span class="p">&lt;</span><span class="nt">span</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;font-medium&quot;</span><span class="p">&gt;{</span><span class="nx">pagination</span><span class="p">.</span><span class="nx">total</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">results</span>
+<span class="w">              </span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">              </span><span class="p">{</span><span class="cm">/* Pagination controls */</span><span class="p">}</span>
+<span class="w">            </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">)}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="theme-support">
+<h2>Theme Support<a class="headerlink" href="#theme-support" title="Link to this heading"></a></h2>
+<p>The application supports both light and dark themes:</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Theme context implementation</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createContext</span><span class="p">,</span><span class="w"> </span><span class="nx">useContext</span><span class="p">,</span><span class="w"> </span><span class="nx">useEffect</span><span class="p">,</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">ThemeContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createContext</span><span class="p">();</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">ThemeProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">theme</span><span class="p">,</span><span class="w"> </span><span class="nx">setTheme</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="s1">&#39;light&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">toggleTheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">newTheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">theme</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;light&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;dark&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;light&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">setTheme</span><span class="p">(</span><span class="nx">newTheme</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;theme&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">newTheme</span><span class="p">);</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Check for user preference in localStorage</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">savedTheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;theme&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// If no preference, check system preference</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">savedTheme</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">prefersDark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="s1">&#39;(prefers-color-scheme: dark)&#39;</span><span class="p">).</span><span class="nx">matches</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">setTheme</span><span class="p">(</span><span class="nx">prefersDark</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;dark&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;light&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">prefersDark</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">setTheme</span><span class="p">(</span><span class="nx">savedTheme</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">savedTheme</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;dark&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">ThemeContext</span><span class="p">.</span><span class="na">Provider</span><span class="w"> </span><span class="na">value</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">theme</span><span class="p">,</span><span class="w"> </span><span class="nx">toggleTheme</span><span class="w"> </span><span class="p">}}&gt;</span>
+<span class="w">      </span><span class="p">{</span><span class="nx">children</span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">ThemeContext</span><span class="p">.</span><span class="na">Provider</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">useTheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">useContext</span><span class="p">(</span><span class="nx">ThemeContext</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<p>Dark mode styles are implemented using Tailwind’s dark mode functionality:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Dark mode styling example</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">Card</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 text-gray-900 dark:text-gray-100&quot;</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">{</span><span class="nx">children</span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="responsive-design">
+<h2>Responsive Design<a class="headerlink" href="#responsive-design" title="Link to this heading"></a></h2>
+<p>The application is fully responsive, adapting to different screen sizes:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Responsive layout example</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">Dashboard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">h1</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;text-2xl sm:text-3xl md:text-4xl font-bold mb-6&quot;</span><span class="p">&gt;</span><span class="nx">Dashboard</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;col-span-1 md:col-span-2 lg:col-span-1&quot;</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;</span><span class="nt">MetricsCard</span><span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="s">&quot;System Status&quot;</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;col-span-1&quot;</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;</span><span class="nt">AlertsCard</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;col-span-1&quot;</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;</span><span class="nt">RecentActivity</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6&quot;</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;col-span-1&quot;</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;</span><span class="nt">AccessChart</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;col-span-1&quot;</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="p">&lt;</span><span class="nt">LocationMap</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="css-in-js-integration">
+<h2>CSS-in-JS Integration<a class="headerlink" href="#css-in-js-integration" title="Link to this heading"></a></h2>
+<p>For more complex styling needs, the application integrates with Emotion:</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Emotion styling example</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">css</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@emotion/react&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">styled</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@emotion/styled&#39;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">pulseAnimation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">css</span><span class="sb">`</span>
+<span class="sb">  @keyframes pulse {</span>
+<span class="sb">    0%, 100% {</span>
+<span class="sb">      opacity: 1;</span>
+<span class="sb">    }</span>
+<span class="sb">    50% {</span>
+<span class="sb">      opacity: 0.5;</span>
+<span class="sb">    }</span>
+<span class="sb">  }</span>
+<span class="sb">`</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">StatusIndicator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`</span>
+<span class="sb">  width: 12px;</span>
+<span class="sb">  height: 12px;</span>
+<span class="sb">  border-radius: 50%;</span>
+<span class="sb">  background-color: </span><span class="si">${</span><span class="nx">props</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">    </span><span class="nx">props</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;online&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;#10b981&#39;</span><span class="w"> </span><span class="o">:</span>
+<span class="w">    </span><span class="nx">props</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;offline&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;#ef4444&#39;</span><span class="w"> </span><span class="o">:</span>
+<span class="w">    </span><span class="nx">props</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;idle&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;#f59e0b&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#9ca3af&#39;</span>
+<span class="w">  </span><span class="si">}</span><span class="sb">;</span>
+<span class="sb">  animation: </span><span class="si">${</span><span class="nx">props</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">props</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;online&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;none&#39;</span><span class="si">}</span><span class="sb">;</span>
+<span class="sb">  </span><span class="si">${</span><span class="nx">pulseAnimation</span><span class="si">}</span>
+<span class="sb">`</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">DeviceStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;flex items-center&quot;</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">StatusIndicator</span><span class="w"> </span><span class="na">status</span><span class="o">=</span><span class="p">{</span><span class="nx">status</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">span</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;ml-2 text-sm text-gray-700 dark:text-gray-300&quot;</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">{</span><span class="nx">status</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mf">0</span><span class="p">).</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">status</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">)}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="animation">
+<h2>Animation<a class="headerlink" href="#animation" title="Link to this heading"></a></h2>
+<p>The application uses subtle animations to enhance the user experience:</p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Animation examples</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// Fade in transition for components</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">FadeIn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;animate-fadeIn&quot;</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">{</span><span class="nx">children</span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">);</span>
+
+<span class="c1">// Transition group for lists</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">AnimatedList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">items</span><span class="p">,</span><span class="w"> </span><span class="nx">renderItem</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="p">&lt;</span><span class="nt">TransitionGroup</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">{</span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">CSSTransition</span>
+<span class="w">        </span><span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span>
+<span class="w">        </span><span class="na">timeout</span><span class="o">=</span><span class="p">{</span><span class="mf">300</span><span class="p">}</span>
+<span class="w">        </span><span class="na">classNames</span><span class="o">=</span><span class="p">{{</span>
+<span class="w">          </span><span class="nx">enter</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;opacity-0&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">enterActive</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;opacity-100 transition-opacity duration-300&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">exit</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;opacity-100&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">exitActive</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;opacity-0 transition-opacity duration-300&#39;</span>
+<span class="w">        </span><span class="p">}}</span>
+<span class="w">      </span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">renderItem</span><span class="p">(</span><span class="nx">item</span><span class="p">)}</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">CSSTransition</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">))}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">TransitionGroup</span><span class="p">&gt;</span>
+<span class="p">);</span>
+
+<span class="c1">// Loading skeleton</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">Skeleton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">className</span><span class="p">}&gt;</span>
+<span class="w">    </span><span class="p">{</span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">({</span><span class="w"> </span><span class="nx">length</span><span class="o">:</span><span class="w"> </span><span class="nx">lines</span><span class="w"> </span><span class="p">}).</span><span class="nx">map</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span>
+<span class="w">        </span><span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span><span class="p">}</span>
+<span class="w">        </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-2&quot;</span>
+<span class="w">      </span><span class="p">/&gt;</span>
+<span class="w">    </span><span class="p">))}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="state_management.html" class="btn btn-neutral float-left" title="State Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="permissions.html" class="btn btn-neutral float-right" title="Permissions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, WIAME EL HAFID, RJILI HOUSSAM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

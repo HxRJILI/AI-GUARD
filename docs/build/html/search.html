@@ -1,0 +1,648 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search &mdash; AI GUARD 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="#" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AI GUARD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction/index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/overview.html">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction/overview.html#what-is-ai-guard">What is AI-Guard?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/overview.html#motivation-and-real-world-problem-it-solves">Motivation and real-world problem it solves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/overview.html#key-benefits">Key benefits</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/project_scope.html">Project Scope</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction/project_scope.html#main-goals">Main goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/project_scope.html#technical-scope">Technical scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/project_scope.html#out-of-scope">Out of scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/project_scope.html#institutions-this-applies-to">Institutions this applies to</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/target_audience.html">Target Audience</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction/target_audience.html#developers">Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/target_audience.html#system-administrators">System Administrators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/target_audience.html#security-teams">Security Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/target_audience.html#institution-management">Institution Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/target_audience.html#end-users">End Users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture/index.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture/high_level_overview.html">High-Level Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture/high_level_overview.html#system-flow">System Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture/high_level_overview.html#system-components">System Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="architecture/high_level_overview.html#client-components">Client Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/high_level_overview.html#backend-components">Backend Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/high_level_overview.html#edge-devices">Edge Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="architecture/high_level_overview.html#communication-flow">Communication Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture/component_breakdown.html">Component Breakdown</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture/component_breakdown.html#client-components">Client Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="architecture/component_breakdown.html#enrollment-interface">Enrollment Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/component_breakdown.html#admin-dashboard">Admin Dashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/component_breakdown.html#security-console">Security Console</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="architecture/component_breakdown.html#backend-components">Backend Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="architecture/component_breakdown.html#rest-api">REST API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/component_breakdown.html#face-detection-service">Face Detection Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/component_breakdown.html#face-recognition-service">Face Recognition Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/component_breakdown.html#notification-service">Notification Service</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="architecture/component_breakdown.html#edge-devices">Edge Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="architecture/component_breakdown.html#jetson-nano">Jetson Nano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/component_breakdown.html#raspberry-pi">Raspberry Pi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture/technologies.html">Technologies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture/technologies.html#frontend-technologies">Frontend Technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#react">React</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#tailwindcss">TailwindCSS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#redux">Redux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#react-router">React Router</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="architecture/technologies.html#backend-technologies">Backend Technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#fastapi">FastAPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#postgresql">PostgreSQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#supabase">Supabase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#redis">Redis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="architecture/technologies.html#ai-ml-technologies">AI/ML Technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#tensorflow">TensorFlow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#mtcnn">MTCNN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#facenet-arcface">FaceNet/ArcFace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#opencv">OpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="architecture/technologies.html#devops-infrastructure">DevOps &amp; Infrastructure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#docker">Docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#kubernetes">Kubernetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#helm">Helm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture/technologies.html#github-actions">GitHub Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features/index.html">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="features/face_enrollment.html">Face Enrollment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="features/face_enrollment.html#enrollment-workflow">Enrollment Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/face_enrollment.html#multi-angle-capture-logic">Multi-angle capture logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/face_enrollment.html#image-quality-factors">Image quality factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/face_enrollment.html#enrollment-management">Enrollment Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/face_enrollment.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="features/face_recognition.html">Face Recognition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="features/face_recognition.html#recognition-process">Recognition Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/face_recognition.html#threshold-logic">Threshold Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/face_recognition.html#performance-factors">Performance Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/face_recognition.html#handling-edge-cases">Handling Edge Cases</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="features/alerts.html">Alerts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="features/alerts.html#alert-types">Alert Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/alerts.html#notification-channels">Notification Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/alerts.html#alert-severity-levels">Alert Severity Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/alerts.html#sample-alert-content">Sample Alert Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/alerts.html#alert-configuration">Alert Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/alerts.html#alert-handling-workflow">Alert Handling Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="features/admin_dashboard.html">Admin Dashboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="features/admin_dashboard.html#dashboard-overview">Dashboard Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/admin_dashboard.html#key-dashboard-features">Key Dashboard Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="features/admin_dashboard.html#real-time-monitoring">Real-time Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="features/admin_dashboard.html#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="features/admin_dashboard.html#access-log-review">Access Log Review</a></li>
+<li class="toctree-l4"><a class="reference internal" href="features/admin_dashboard.html#system-health-monitoring">System Health Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="features/admin_dashboard.html#analytics">Analytics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="features/admin_dashboard.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="features/admin_dashboard.html#dashboard-customization">Dashboard Customization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="features/access_control.html">Access Control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="features/access_control.html#defined-roles">Defined Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/access_control.html#feature-access-matrix">Feature Access Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/access_control.html#permission-model">Permission Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/access_control.html#access-levels">Access Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/access_control.html#time-based-restrictions">Time-Based Restrictions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features/access_control.html#role-management">Role Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_models/index.html">Data Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_models/datasets.html">Datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_models/datasets.html#public-datasets">Public Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/datasets.html#labeled-faces-in-the-wild-lfw">Labeled Faces in the Wild (LFW)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/datasets.html#face-detection-data-set-and-benchmark-fddb">Face Detection Data Set and Benchmark (FDDB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/datasets.html#celeba">CelebA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/datasets.html#ms1m-microsoft-1-million-celebs">MS1M (Microsoft 1-Million Celebs)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/datasets.html#custom-datasets">Custom Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/datasets.html#ensam-internal-dataset">ENSAM Internal Dataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/datasets.html#environmental-variations-set">Environmental Variations Set</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/datasets.html#dataset-usage">Dataset Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/datasets.html#data-collection-protocol">Data Collection Protocol</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data_models/augmentation.html">Augmentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_models/augmentation.html#geometric-transformations">Geometric Transformations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#random-rotation">Random Rotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#random-horizontal-flipping">Random Horizontal Flipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#random-cropping">Random Cropping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#perspective-transformations">Perspective Transformations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/augmentation.html#photometric-transformations">Photometric Transformations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#brightness-variation">Brightness Variation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#contrast-adjustment">Contrast Adjustment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#gaussian-noise">Gaussian Noise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#color-jittering">Color Jittering</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/augmentation.html#occlusion-simulation">Occlusion Simulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#random-rectangular-occlusions">Random Rectangular Occlusions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#face-mask-simulation">Face Mask Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/augmentation.html#glasses-simulation">Glasses Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/augmentation.html#augmentation-pipeline">Augmentation Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/augmentation.html#implementation-details">Implementation Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data_models/model_architecture.html">Model Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_models/model_architecture.html#face-detection">Face Detection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_architecture.html#multi-task-cascaded-convolutional-networks-mtcnn">Multi-task Cascaded Convolutional Networks (MTCNN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_architecture.html#alternative-retinaface">Alternative: RetinaFace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/model_architecture.html#face-recognition">Face Recognition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_architecture.html#facenet-architecture">FaceNet Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_architecture.html#alternative-arcface">Alternative: ArcFace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/model_architecture.html#model-comparison">Model Comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/model_architecture.html#implementation-details">Implementation Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data_models/fine_tuning.html">Fine-Tuning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_models/fine_tuning.html#fine-tuning-workflow">Fine-Tuning Workflow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/fine_tuning.html#data-collection">1. <strong>Data Collection</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/fine_tuning.html#data-curation">2. <strong>Data Curation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/fine_tuning.html#embedding-generation">3. <strong>Embedding Generation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/fine_tuning.html#transfer-learning">4. <strong>Transfer Learning</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/fine_tuning.html#id1">5. <strong>Fine-Tuning</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/fine_tuning.html#evaluation">6. <strong>Evaluation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/fine_tuning.html#deployment">7. <strong>Deployment</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/fine_tuning.html#schedule-and-triggers">Schedule and Triggers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/fine_tuning.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data_models/model_serving.html">Model Serving</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_models/model_serving.html#serving-infrastructure">Serving Infrastructure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_serving.html#tensorflow-serving">TensorFlow Serving</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_serving.html#torchserve-alternative">TorchServe (Alternative)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/model_serving.html#api-endpoints">API Endpoints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_serving.html#detection-endpoint">Detection Endpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_serving.html#recognition-endpoint">Recognition Endpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_serving.html#end-to-end-endpoint">End-to-End Endpoint</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/model_serving.html#serving-optimization">Serving Optimization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_serving.html#request-batching">Request Batching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_models/model_serving.html#model-optimization">Model Optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/model_serving.html#scaling-and-high-availability">Scaling and High Availability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_models/model_serving.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="database/index.html">Database</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="database/tables.html">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="database/tables.html#users-table">Users Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/tables.html#face-embeddings-table">Face Embeddings Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/tables.html#access-logs-table">Access Logs Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/tables.html#locations-table">Locations Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/tables.html#settings-table">Settings Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/tables.html#alerts-table">Alerts Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/tables.html#devices-table">Devices Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/tables.html#data-retention">Data Retention</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="database/relationships.html">Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="database/relationships.html#entity-relationship-diagram-erd">Entity Relationship Diagram (ERD)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/relationships.html#key-relationships">Key Relationships</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#users-to-face-embeddings">Users to Face Embeddings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#users-to-access-logs">Users to Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#locations-to-access-logs">Locations to Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#locations-to-devices">Locations to Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#alerts-to-various-entities">Alerts to Various Entities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="database/relationships.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#admin-users">Admin Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#security-officers">Security Officers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="database/relationships.html#polymorphic-relationships">Polymorphic Relationships</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#attachments">Attachments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="database/relationships.html#database-constraints">Database Constraints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#check-constraints">Check Constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/relationships.html#unique-constraints">Unique Constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="database/data_protection.html">Data Protection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="database/data_protection.html#embedding-encryption">Embedding Encryption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="database/data_protection.html#aes-256-encryption">AES-256 Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/data_protection.html#key-management">Key Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/data_protection.html#database-level-encryption">Database-level Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="database/data_protection.html#gdpr-compliance">GDPR Compliance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="database/data_protection.html#explicit-consent-tracking">Explicit Consent Tracking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/data_protection.html#right-to-be-forgotten">Right to be Forgotten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/data_protection.html#data-access">Data Access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/data_protection.html#purpose-limitation">Purpose Limitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/data_protection.html#data-minimization">Data Minimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/data_protection.html#audit-logging">Audit Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="frontend/index.html">Frontend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="frontend/structure.html">Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="frontend/structure.html#application-architecture">Application Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/structure.html#directory-structure">Directory Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/structure.html#pages">Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#login">Login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#dashboard">Dashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#enrollment">Enrollment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#access-logs">Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#live-monitoring">Live Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#alerts">Alerts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#settings">Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#reports">Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/structure.html#component-organization">Component Organization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#base-components">Base Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#composite-components">Composite Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#feature-components">Feature Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/structure.html#layout-components">Layout Components</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="frontend/state_management.html">State Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="frontend/state_management.html#store-structure">Store Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/state_management.html#redux-toolkit-implementation">Redux Toolkit Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/state_management.html#action-types">Action Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="frontend/state_management.html#authentication">Authentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/state_management.html#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/state_management.html#enrollment">Enrollment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/state_management.html#logs">Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/state_management.html#selectors">Selectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/state_management.html#middleware">Middleware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="frontend/state_management.html#api-middleware">API Middleware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/state_management.html#websocket-middleware">WebSocket Middleware</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/state_management.html#persistence">Persistence</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="frontend/styling.html">Styling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="frontend/styling.html#design-system">Design System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/styling.html#color-scheme">Color Scheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/styling.html#typography">Typography</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/styling.html#component-styling">Component Styling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="frontend/styling.html#basic-components">Basic Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/styling.html#complex-components">Complex Components</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/styling.html#theme-support">Theme Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/styling.html#responsive-design">Responsive Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/styling.html#css-in-js-integration">CSS-in-JS Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/styling.html#animation">Animation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="frontend/permissions.html">Permissions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="frontend/permissions.html#permission-model">Permission Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="frontend/permissions.html#role-based-access-control">Role-Based Access Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend/permissions.html#permission-mapping">Permission Mapping</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/permissions.html#permission-hook">Permission Hook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/permissions.html#protected-route-component">Protected Route Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/permissions.html#component-level-permission-control">Component-Level Permission Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/permissions.html#permission-based-navigation">Permission-Based Navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/permissions.html#form-field-permission-control">Form Field Permission Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="frontend/permissions.html#access-denied-handling">Access Denied Handling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/authentication.html">Authentication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html#login-endpoint">Login Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html#token-refresh">Token Refresh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html#authentication-middleware">Authentication Middleware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html#token-payload-structure">Token Payload Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html#two-factor-authentication">Two-Factor Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html#logout">Logout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html#password-reset">Password Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html#security-considerations">Security Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/user_management.html">User Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/user_management.html#create-user">Create User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/user_management.html#get-users">Get Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/user_management.html#get-user">Get User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/user_management.html#update-user">Update User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/user_management.html#delete-user">Delete User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/user_management.html#bulk-user-import">Bulk User Import</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_enrollment.html">Face Enrollment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/face_enrollment.html#enroll-face">Enroll Face</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/face_enrollment.html#get-enrollment-status">Get Enrollment Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/face_enrollment.html#delete-enrollment">Delete Enrollment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/face_enrollment.html#update-enrollment-metadata">Update Enrollment Metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/face_enrollment.html#add-enrollment-image">Add Enrollment Image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html">Security Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#create-user">Create User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#get-users">Get Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#get-user">Get User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#update-user">Update User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#delete-user">Delete User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#bulk-user-import">Bulk User Import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#enroll-face">Enroll Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#get-enrollment-status">Get Enrollment Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#delete-enrollment">Delete Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#update-enrollment-metadata">Update Enrollment Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#add-enrollment-image">Add Enrollment Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#recognize-face">Recognize Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#batch-recognition">Batch Recognition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#recognition-stream">Recognition Stream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#recognition-thresholds">Recognition Thresholds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#recognition-analytics">Recognition Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/face_recognition.html#access-logs">Access Logs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/face_recognition.html#get-access-logs">Get Access Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/logs_alerts.html">Logs &amp; Alerts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/logs_alerts.html#access-logs">Access Logs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#get-access-logs">Get Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#get-access-log-detail">Get Access Log Detail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#get-access-log-image">Get Access Log Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#update-access-log-notes">Update Access Log Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#export-access-logs">Export Access Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/logs_alerts.html#alerts">Alerts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#get-alerts">Get Alerts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#get-alert-detail">Get Alert Detail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#acknowledge-alert">Acknowledge Alert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#resolve-alert">Resolve Alert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/logs_alerts.html#create-alert">Create Alert</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/system_settings.html">System Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/system_settings.html#get-settings">Get Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/system_settings.html#get-setting-by-key">Get Setting by Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/system_settings.html#update-setting">Update Setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/system_settings.html#update-multiple-settings">Update Multiple Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/system_settings.html#reset-settings-to-default">Reset Settings to Default</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment/index.html">Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment/requirements.html">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment/requirements.html#hardware-requirements">Hardware Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="deployment/requirements.html#server-components">Server Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deployment/requirements.html#edge-devices">Edge Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/requirements.html#software-requirements">Software Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="deployment/requirements.html#server-environment">Server Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deployment/requirements.html#edge-environment">Edge Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/requirements.html#network-requirements">Network Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/options.html">Deployment Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment/options.html#local-deployment">Local Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/options.html#cloud-deployment">Cloud Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="deployment/options.html#kubernetes-deployment">Kubernetes Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/options.html#edge-device-deployment">Edge Device Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="deployment/options.html#jetson-nano-setup">Jetson Nano Setup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security/data.html">Data Security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="security/data.html#encryption-at-rest">Encryption At Rest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="security/data.html#database-encryption">Database Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="security/data.html#face-embedding-encryption">Face Embedding Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="security/data.html#file-system-encryption">File System Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="security/data.html#encryption-in-transit">Encryption In Transit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="security/data.html#internal-communications">Internal Communications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="security/data.html#external-communications">External Communications</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="security/data.html#data-minimization">Data Minimization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring/index.html">Monitoring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monitoring/metrics.html">Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="monitoring/metrics.html#system-metrics">System Metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="monitoring/metrics.html#infrastructure-metrics">Infrastructure Metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="monitoring/metrics.html#application-metrics">Application Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="monitoring/metrics.html#business-metrics">Business Metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="monitoring/metrics.html#recognition-metrics">Recognition Metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="monitoring/metrics.html#access-metrics">Access Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="monitoring/metrics.html#monitoring-dashboard">Monitoring Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monitoring/metrics.html#prometheus-configuration">Prometheus Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developer/index.html">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="developer/local_setup.html">Local Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="developer/local_setup.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer/local_setup.html#clone-the-repository">Clone the Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer/local_setup.html#development-environment">Development Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer/local_setup.html#frontend-development">Frontend Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer/local_setup.html#backend-development">Backend Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer/local_setup.html#ml-model-development">ML Model Development</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix/index.html">Glossary &amp; Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendix/glossary.html">Glossary</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AI GUARD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Search</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <noscript>
+  <div id="fallback" class="admonition warning">
+    <p class="last">
+      Please activate JavaScript to enable the search functionality.
+    </p>
+  </div>
+  </noscript>
+
+  
+  <div id="search-results">
+  
+  </div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, WIAME EL HAFID, RJILI HOUSSAM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <script>
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+  
+  <script id="searchindexloader"></script>
+   
+
+
+</body>
+</html>

@@ -1,0 +1,1010 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>State Management &mdash; AI GUARD 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Styling" href="styling.html" />
+    <link rel="prev" title="Structure" href="structure.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AI GUARD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/overview.html">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/overview.html#what-is-ai-guard">What is AI-Guard?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/overview.html#motivation-and-real-world-problem-it-solves">Motivation and real-world problem it solves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/overview.html#key-benefits">Key benefits</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/project_scope.html">Project Scope</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/project_scope.html#main-goals">Main goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/project_scope.html#technical-scope">Technical scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/project_scope.html#out-of-scope">Out of scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/project_scope.html#institutions-this-applies-to">Institutions this applies to</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/target_audience.html">Target Audience</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#developers">Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#system-administrators">System Administrators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#security-teams">Security Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#institution-management">Institution Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/target_audience.html#end-users">End Users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/high_level_overview.html">High-Level Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/high_level_overview.html#system-flow">System Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/high_level_overview.html#system-components">System Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/high_level_overview.html#client-components">Client Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/high_level_overview.html#backend-components">Backend Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/high_level_overview.html#edge-devices">Edge Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/high_level_overview.html#communication-flow">Communication Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/component_breakdown.html">Component Breakdown</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/component_breakdown.html#client-components">Client Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#enrollment-interface">Enrollment Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#admin-dashboard">Admin Dashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#security-console">Security Console</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/component_breakdown.html#backend-components">Backend Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#rest-api">REST API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#face-detection-service">Face Detection Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#face-recognition-service">Face Recognition Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#notification-service">Notification Service</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/component_breakdown.html#edge-devices">Edge Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#jetson-nano">Jetson Nano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/component_breakdown.html#raspberry-pi">Raspberry Pi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/technologies.html">Technologies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/technologies.html#frontend-technologies">Frontend Technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#react">React</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#tailwindcss">TailwindCSS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#redux">Redux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#react-router">React Router</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/technologies.html#backend-technologies">Backend Technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#fastapi">FastAPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#postgresql">PostgreSQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#supabase">Supabase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#redis">Redis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/technologies.html#ai-ml-technologies">AI/ML Technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#tensorflow">TensorFlow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#mtcnn">MTCNN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#facenet-arcface">FaceNet/ArcFace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#opencv">OpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/technologies.html#devops-infrastructure">DevOps &amp; Infrastructure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#docker">Docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#kubernetes">Kubernetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#helm">Helm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../architecture/technologies.html#github-actions">GitHub Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../features/index.html">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../features/face_enrollment.html">Face Enrollment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#enrollment-workflow">Enrollment Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#multi-angle-capture-logic">Multi-angle capture logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#image-quality-factors">Image quality factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#enrollment-management">Enrollment Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_enrollment.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../features/face_recognition.html">Face Recognition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_recognition.html#recognition-process">Recognition Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_recognition.html#threshold-logic">Threshold Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_recognition.html#performance-factors">Performance Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/face_recognition.html#handling-edge-cases">Handling Edge Cases</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../features/alerts.html">Alerts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#alert-types">Alert Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#notification-channels">Notification Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#alert-severity-levels">Alert Severity Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#sample-alert-content">Sample Alert Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#alert-configuration">Alert Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/alerts.html#alert-handling-workflow">Alert Handling Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../features/admin_dashboard.html">Admin Dashboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/admin_dashboard.html#dashboard-overview">Dashboard Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/admin_dashboard.html#key-dashboard-features">Key Dashboard Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#real-time-monitoring">Real-time Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#access-log-review">Access Log Review</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#system-health-monitoring">System Health Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#analytics">Analytics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../features/admin_dashboard.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../features/admin_dashboard.html#dashboard-customization">Dashboard Customization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../features/access_control.html">Access Control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#defined-roles">Defined Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#feature-access-matrix">Feature Access Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#permission-model">Permission Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#access-levels">Access Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#time-based-restrictions">Time-Based Restrictions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features/access_control.html#role-management">Role Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_models/index.html">Data Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/datasets.html">Datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/datasets.html#public-datasets">Public Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#labeled-faces-in-the-wild-lfw">Labeled Faces in the Wild (LFW)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#face-detection-data-set-and-benchmark-fddb">Face Detection Data Set and Benchmark (FDDB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#celeba">CelebA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#ms1m-microsoft-1-million-celebs">MS1M (Microsoft 1-Million Celebs)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/datasets.html#custom-datasets">Custom Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#ensam-internal-dataset">ENSAM Internal Dataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/datasets.html#environmental-variations-set">Environmental Variations Set</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/datasets.html#dataset-usage">Dataset Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/datasets.html#data-collection-protocol">Data Collection Protocol</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/augmentation.html">Augmentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#geometric-transformations">Geometric Transformations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#random-rotation">Random Rotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#random-horizontal-flipping">Random Horizontal Flipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#random-cropping">Random Cropping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#perspective-transformations">Perspective Transformations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#photometric-transformations">Photometric Transformations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#brightness-variation">Brightness Variation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#contrast-adjustment">Contrast Adjustment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#gaussian-noise">Gaussian Noise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#color-jittering">Color Jittering</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#occlusion-simulation">Occlusion Simulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#random-rectangular-occlusions">Random Rectangular Occlusions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#face-mask-simulation">Face Mask Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/augmentation.html#glasses-simulation">Glasses Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#augmentation-pipeline">Augmentation Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/augmentation.html#implementation-details">Implementation Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/model_architecture.html">Model Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_architecture.html#face-detection">Face Detection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_architecture.html#multi-task-cascaded-convolutional-networks-mtcnn">Multi-task Cascaded Convolutional Networks (MTCNN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_architecture.html#alternative-retinaface">Alternative: RetinaFace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_architecture.html#face-recognition">Face Recognition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_architecture.html#facenet-architecture">FaceNet Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_architecture.html#alternative-arcface">Alternative: ArcFace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_architecture.html#model-comparison">Model Comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_architecture.html#implementation-details">Implementation Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/fine_tuning.html">Fine-Tuning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/fine_tuning.html#fine-tuning-workflow">Fine-Tuning Workflow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#data-collection">1. <strong>Data Collection</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#data-curation">2. <strong>Data Curation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#embedding-generation">3. <strong>Embedding Generation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#transfer-learning">4. <strong>Transfer Learning</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#id1">5. <strong>Fine-Tuning</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#evaluation">6. <strong>Evaluation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/fine_tuning.html#deployment">7. <strong>Deployment</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/fine_tuning.html#schedule-and-triggers">Schedule and Triggers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/fine_tuning.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_models/model_serving.html">Model Serving</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#serving-infrastructure">Serving Infrastructure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#tensorflow-serving">TensorFlow Serving</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#torchserve-alternative">TorchServe (Alternative)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#api-endpoints">API Endpoints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#detection-endpoint">Detection Endpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#recognition-endpoint">Recognition Endpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#end-to-end-endpoint">End-to-End Endpoint</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#serving-optimization">Serving Optimization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#request-batching">Request Batching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_models/model_serving.html#model-optimization">Model Optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#scaling-and-high-availability">Scaling and High Availability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_models/model_serving.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database/tables.html">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#users-table">Users Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#face-embeddings-table">Face Embeddings Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#access-logs-table">Access Logs Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#locations-table">Locations Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#settings-table">Settings Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#alerts-table">Alerts Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#devices-table">Devices Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/tables.html#data-retention">Data Retention</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/relationships.html">Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#entity-relationship-diagram-erd">Entity Relationship Diagram (ERD)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#key-relationships">Key Relationships</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#users-to-face-embeddings">Users to Face Embeddings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#users-to-access-logs">Users to Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#locations-to-access-logs">Locations to Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#locations-to-devices">Locations to Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#alerts-to-various-entities">Alerts to Various Entities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#admin-users">Admin Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#security-officers">Security Officers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#polymorphic-relationships">Polymorphic Relationships</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#attachments">Attachments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/relationships.html#database-constraints">Database Constraints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#check-constraints">Check Constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/relationships.html#unique-constraints">Unique Constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/data_protection.html">Data Protection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/data_protection.html#embedding-encryption">Embedding Encryption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#aes-256-encryption">AES-256 Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#key-management">Key Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#database-level-encryption">Database-level Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/data_protection.html#gdpr-compliance">GDPR Compliance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#explicit-consent-tracking">Explicit Consent Tracking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#right-to-be-forgotten">Right to be Forgotten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#data-access">Data Access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#purpose-limitation">Purpose Limitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#data-minimization">Data Minimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/data_protection.html#audit-logging">Audit Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Frontend</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="structure.html">Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#application-architecture">Application Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#directory-structure">Directory Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#pages">Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#login">Login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#dashboard">Dashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#enrollment">Enrollment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#access-logs">Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#live-monitoring">Live Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#alerts">Alerts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#settings">Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#reports">Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#component-organization">Component Organization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#base-components">Base Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#composite-components">Composite Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#feature-components">Feature Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html#layout-components">Layout Components</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">State Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#store-structure">Store Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#redux-toolkit-implementation">Redux Toolkit Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#action-types">Action Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#authentication">Authentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enrollment">Enrollment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logs">Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#selectors">Selectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#middleware">Middleware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api-middleware">API Middleware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#websocket-middleware">WebSocket Middleware</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#persistence">Persistence</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="styling.html">Styling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="styling.html#design-system">Design System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="styling.html#color-scheme">Color Scheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="styling.html#typography">Typography</a></li>
+<li class="toctree-l3"><a class="reference internal" href="styling.html#component-styling">Component Styling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="styling.html#basic-components">Basic Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="styling.html#complex-components">Complex Components</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="styling.html#theme-support">Theme Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="styling.html#responsive-design">Responsive Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="styling.html#css-in-js-integration">CSS-in-JS Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="styling.html#animation">Animation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#permission-model">Permission Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#role-based-access-control">Role-Based Access Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permission-mapping">Permission Mapping</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#permission-hook">Permission Hook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#protected-route-component">Protected Route Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#component-level-permission-control">Component-Level Permission Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#permission-based-navigation">Permission-Based Navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#form-field-permission-control">Form Field Permission Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#access-denied-handling">Access Denied Handling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/authentication.html">Authentication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#login-endpoint">Login Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#token-refresh">Token Refresh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#authentication-middleware">Authentication Middleware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#token-payload-structure">Token Payload Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#two-factor-authentication">Two-Factor Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#logout">Logout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#password-reset">Password Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/authentication.html#security-considerations">Security Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/user_management.html">User Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#create-user">Create User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#get-users">Get Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#get-user">Get User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#update-user">Update User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#delete-user">Delete User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/user_management.html#bulk-user-import">Bulk User Import</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_enrollment.html">Face Enrollment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#enroll-face">Enroll Face</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#get-enrollment-status">Get Enrollment Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#delete-enrollment">Delete Enrollment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#update-enrollment-metadata">Update Enrollment Metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_enrollment.html#add-enrollment-image">Add Enrollment Image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html">Security Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#create-user">Create User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#get-users">Get Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#get-user">Get User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#update-user">Update User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#delete-user">Delete User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#bulk-user-import">Bulk User Import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#enroll-face">Enroll Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#get-enrollment-status">Get Enrollment Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#delete-enrollment">Delete Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#update-enrollment-metadata">Update Enrollment Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#add-enrollment-image">Add Enrollment Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#recognize-face">Recognize Face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#batch-recognition">Batch Recognition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#recognition-stream">Recognition Stream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#recognition-thresholds">Recognition Thresholds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#recognition-analytics">Recognition Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/face_recognition.html#access-logs">Access Logs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/face_recognition.html#get-access-logs">Get Access Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/logs_alerts.html">Logs &amp; Alerts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/logs_alerts.html#access-logs">Access Logs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-access-logs">Get Access Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-access-log-detail">Get Access Log Detail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-access-log-image">Get Access Log Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#update-access-log-notes">Update Access Log Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#export-access-logs">Export Access Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api/logs_alerts.html#alerts">Alerts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-alerts">Get Alerts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#get-alert-detail">Get Alert Detail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#acknowledge-alert">Acknowledge Alert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#resolve-alert">Resolve Alert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/logs_alerts.html#create-alert">Create Alert</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/system_settings.html">System Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#get-settings">Get Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#get-setting-by-key">Get Setting by Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#update-setting">Update Setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#update-multiple-settings">Update Multiple Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/system_settings.html#reset-settings-to-default">Reset Settings to Default</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/index.html">Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/requirements.html">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/requirements.html#hardware-requirements">Hardware Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/requirements.html#server-components">Server Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/requirements.html#edge-devices">Edge Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/requirements.html#software-requirements">Software Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/requirements.html#server-environment">Server Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/requirements.html#edge-environment">Edge Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/requirements.html#network-requirements">Network Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/options.html">Deployment Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/options.html#local-deployment">Local Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/options.html#cloud-deployment">Cloud Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/options.html#kubernetes-deployment">Kubernetes Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/options.html#edge-device-deployment">Edge Device Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/options.html#jetson-nano-setup">Jetson Nano Setup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../security/data.html">Data Security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../security/data.html#encryption-at-rest">Encryption At Rest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#database-encryption">Database Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#face-embedding-encryption">Face Embedding Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#file-system-encryption">File System Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../security/data.html#encryption-in-transit">Encryption In Transit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#internal-communications">Internal Communications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../security/data.html#external-communications">External Communications</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../security/data.html#data-minimization">Data Minimization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../monitoring/index.html">Monitoring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../monitoring/metrics.html">Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../monitoring/metrics.html#system-metrics">System Metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../monitoring/metrics.html#infrastructure-metrics">Infrastructure Metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../monitoring/metrics.html#application-metrics">Application Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../monitoring/metrics.html#business-metrics">Business Metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../monitoring/metrics.html#recognition-metrics">Recognition Metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../monitoring/metrics.html#access-metrics">Access Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../monitoring/metrics.html#monitoring-dashboard">Monitoring Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../monitoring/metrics.html#prometheus-configuration">Prometheus Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer/index.html">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer/local_setup.html">Local Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#clone-the-repository">Clone the Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#development-environment">Development Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#frontend-development">Frontend Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#backend-development">Backend Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/local_setup.html#ml-model-development">ML Model Development</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Glossary &amp; Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/glossary.html">Glossary</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AI GUARD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Frontend</a></li>
+      <li class="breadcrumb-item active">State Management</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/frontend/state_management.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="state-management">
+<h1>State Management<a class="headerlink" href="#state-management" title="Link to this heading"></a></h1>
+<p>The application uses Redux for state management to handle the complex application state.</p>
+<section id="store-structure">
+<h2>Store Structure<a class="headerlink" href="#store-structure" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id1">
+<img alt="Redux State Flow" src="_static/redux-flow.png" />
+<figcaption>
+<p><span class="caption-text">Redux state management flow</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Redux store is organized into several slices:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Store structure</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">auth</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">role</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">token</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;JWT_TOKEN&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">isAuthenticated</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">loginError</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">isLoading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">users</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">items</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span>
+<span class="w">    </span><span class="nx">selectedUser</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">loading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">pagination</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">page</span><span class="p">,</span><span class="w"> </span><span class="nx">perPage</span><span class="p">,</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">enrollment</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">currentUser</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">capturedImages</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span>
+<span class="w">    </span><span class="nx">enrollmentStep</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">processingStatus</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;idle&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">qualityScores</span><span class="o">:</span><span class="w"> </span><span class="p">[...]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">logs</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">items</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span>
+<span class="w">    </span><span class="nx">filters</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">location</span><span class="p">,</span><span class="w"> </span><span class="nx">timeRange</span><span class="p">,</span><span class="w"> </span><span class="nx">accessStatus</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">pagination</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">page</span><span class="p">,</span><span class="w"> </span><span class="nx">perPage</span><span class="p">,</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">loading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">settings</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">thresholds</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w"> </span><span class="nx">highSecurity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.85</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">notificationChannels</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span>
+<span class="w">    </span><span class="nx">systemSettings</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">liveMonitoring</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">activeFeeds</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span>
+<span class="w">    </span><span class="nx">recentEvents</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span>
+<span class="w">    </span><span class="nx">connectionStatus</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;connected&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">alerts</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">items</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span>
+<span class="w">    </span><span class="nx">filters</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">severity</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="p">,</span><span class="w"> </span><span class="nx">timeRange</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">unreadCount</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="redux-toolkit-implementation">
+<h2>Redux Toolkit Implementation<a class="headerlink" href="#redux-toolkit-implementation" title="Link to this heading"></a></h2>
+<p>The application uses Redux Toolkit to reduce boilerplate and enforce best practices:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">User slice example</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createSlice</span><span class="p">,</span><span class="w"> </span><span class="nx">createAsyncThunk</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@reduxjs/toolkit&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">userService</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../services/userService&#39;</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">fetchUsers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createAsyncThunk</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;users/fetchUsers&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">params</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">rejectWithValue</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nx">getUsers</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">rejectWithValue</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">usersSlice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlice</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;users&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">initialState</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">items</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nx">selectedUser</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">loading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">pagination</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">page</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">perPage</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">total</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">reducers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">selectUser</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">selectedUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">clearSelectedUser</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">selectedUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">setUserFilters</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">filters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{...</span><span class="nx">state</span><span class="p">.</span><span class="nx">filters</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">};</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">extraReducers</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">builder</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">builder</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">addCase</span><span class="p">(</span><span class="nx">fetchUsers</span><span class="p">.</span><span class="nx">pending</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">state</span><span class="p">.</span><span class="nx">loading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">state</span><span class="p">.</span><span class="nx">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">      </span><span class="p">})</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">addCase</span><span class="p">(</span><span class="nx">fetchUsers</span><span class="p">.</span><span class="nx">fulfilled</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">state</span><span class="p">.</span><span class="nx">loading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">state</span><span class="p">.</span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">items</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">state</span><span class="p">.</span><span class="nx">pagination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">pagination</span><span class="p">;</span>
+<span class="w">      </span><span class="p">})</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">addCase</span><span class="p">(</span><span class="nx">fetchUsers</span><span class="p">.</span><span class="nx">rejected</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">state</span><span class="p">.</span><span class="nx">loading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">state</span><span class="p">.</span><span class="nx">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;Failed to fetch users&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">selectUser</span><span class="p">,</span><span class="w"> </span><span class="nx">clearSelectedUser</span><span class="p">,</span><span class="w"> </span><span class="nx">setUserFilters</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">usersSlice</span><span class="p">.</span><span class="nx">actions</span><span class="p">;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">usersSlice</span><span class="p">.</span><span class="nx">reducer</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="action-types">
+<h2>Action Types<a class="headerlink" href="#action-types" title="Link to this heading"></a></h2>
+<p>Key actions for each slice:</p>
+<section id="authentication">
+<h3>Authentication<a class="headerlink" href="#authentication" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AUTH_LOGIN_REQUEST</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AUTH_LOGIN_SUCCESS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AUTH_LOGIN_FAILURE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AUTH_LOGOUT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AUTH_REFRESH_TOKEN</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AUTH_UPDATE_USER</span></code></p></li>
+</ul>
+</section>
+<section id="user-management">
+<h3>User Management<a class="headerlink" href="#user-management" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">USERS_FETCH_REQUEST</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">USERS_FETCH_SUCCESS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">USERS_FETCH_FAILURE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">USER_CREATE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">USER_UPDATE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">USER_DELETE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">USER_SELECT</span></code></p></li>
+</ul>
+</section>
+<section id="enrollment">
+<h3>Enrollment<a class="headerlink" href="#enrollment" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ENROLLMENT_SET_USER</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ENROLLMENT_CAPTURE_IMAGE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ENROLLMENT_PROCESS_IMAGES</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ENROLLMENT_COMPLETE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ENROLLMENT_RESET</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ENROLLMENT_UPDATE_QUALITY</span></code></p></li>
+</ul>
+</section>
+<section id="logs">
+<h3>Logs<a class="headerlink" href="#logs" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">LOGS_FETCH_REQUEST</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOGS_FETCH_SUCCESS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOGS_FETCH_FAILURE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOGS_UPDATE_FILTERS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOG_UPDATE_NOTES</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOG_MARK_IMPORTANT</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="selectors">
+<h2>Selectors<a class="headerlink" href="#selectors" title="Link to this heading"></a></h2>
+<p>Reusable selectors for accessing state:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Redux selectors</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Authentication selectors</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">selectCurrentUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">selectIsAuthenticated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">isAuthenticated</span><span class="p">;</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">selectAuthLoading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">loading</span><span class="p">;</span>
+
+<span class="c1">// User selectors</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">selectAllUsers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nx">items</span><span class="p">;</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">selectSelectedUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nx">selectedUser</span><span class="p">;</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">selectUserById</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">userId</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">  </span><span class="nx">state</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">userId</span><span class="p">);</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">selectUsersPagination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nx">pagination</span><span class="p">;</span>
+
+<span class="c1">// Advanced composed selector</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">selectActiveAdminUsers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSelector</span><span class="p">(</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">selectAllUsers</span><span class="p">],</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">users</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">users</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">active</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">role</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;ADMIN&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="middleware">
+<h2>Middleware<a class="headerlink" href="#middleware" title="Link to this heading"></a></h2>
+<p>Custom middleware for specific functionality:</p>
+<section id="api-middleware">
+<h3>API Middleware<a class="headerlink" href="#api-middleware" title="Link to this heading"></a></h3>
+<p>Handles API communication and token refreshing:</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">API middleware</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">apiMiddleware</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">,</span><span class="w"> </span><span class="nx">getState</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">next</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">action</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">action</span><span class="p">.</span><span class="nx">meta</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="nx">action</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">api</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">action</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">method</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">onSuccess</span><span class="p">,</span><span class="w"> </span><span class="nx">onError</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">api</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getState</span><span class="p">().</span><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s1">&#39;REQUEST&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">apiService</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
+<span class="w">        </span><span class="nx">url</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">method</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">data</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Authorization</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">      </span><span class="p">});</span>
+
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">successAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;REQUEST&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SUCCESS&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">payload</span><span class="o">:</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span>
+<span class="w">      </span><span class="p">};</span>
+
+<span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">successAction</span><span class="p">);</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onSuccess</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">401</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Token expired, try refresh</span>
+<span class="w">        </span><span class="nx">dispatch</span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;AUTH_REFRESH_TOKEN&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">errorAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;REQUEST&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;FAILURE&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">payload</span><span class="o">:</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="w"> </span><span class="p">}</span>
+<span class="w">      </span><span class="p">};</span>
+
+<span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">errorAction</span><span class="p">);</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">onError</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onError</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">action</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="websocket-middleware">
+<h3>WebSocket Middleware<a class="headerlink" href="#websocket-middleware" title="Link to this heading"></a></h3>
+<p>Handles real-time updates via WebSocket:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">WebSocket middleware</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">websocketMiddleware</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">,</span><span class="w"> </span><span class="nx">getState</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">next</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">action</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;WS_CONNECT&#39;</span><span class="o">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">socket</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">socket</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getState</span><span class="p">().</span><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="sb">`wss://api.aiguard.example.com/ws?token=</span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+
+<span class="w">        </span><span class="nx">socket</span><span class="p">.</span><span class="nx">onopen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">dispatch</span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;WS_CONNECTED&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">        </span><span class="p">};</span>
+
+<span class="w">        </span><span class="nx">socket</span><span class="p">.</span><span class="nx">onclose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">dispatch</span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;WS_DISCONNECTED&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">        </span><span class="p">};</span>
+
+<span class="w">        </span><span class="nx">socket</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">const</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+
+<span class="w">          </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;ACCESS_EVENT&#39;</span><span class="o">:</span>
+<span class="w">              </span><span class="nx">dispatch</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;LIVE_MONITORING_NEW_EVENT&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">payload</span><span class="o">:</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">data</span>
+<span class="w">              </span><span class="p">});</span>
+<span class="w">              </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;NEW_ALERT&#39;</span><span class="o">:</span>
+<span class="w">              </span><span class="nx">dispatch</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ALERTS_NEW_ALERT&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">payload</span><span class="o">:</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">data</span>
+<span class="w">              </span><span class="p">});</span>
+<span class="w">              </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// Handle other message types</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">};</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;WS_DISCONNECT&#39;</span><span class="o">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">socket</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">socket</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;WS_SEND&#39;</span><span class="o">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">socket</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">      </span><span class="k">default</span><span class="o">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">action</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="persistence">
+<h2>Persistence<a class="headerlink" href="#persistence" title="Link to this heading"></a></h2>
+<p>The application uses Redux Persist for state persistence:</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Redux persistence configuration</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">persistReducer</span><span class="p">,</span><span class="w"> </span><span class="nx">persistStore</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;redux-persist&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">storage</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;redux-persist/lib/storage&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">encryptTransform</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;redux-persist-transform-encrypt&#39;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">encryptor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">encryptTransform</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">secretKey</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;my-secure-key&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">onError</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Persist encryption error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">persistConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">storage</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">transforms</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">encryptor</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">whitelist</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;auth&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;settings&#39;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Only persist these reducers</span>
+<span class="w">  </span><span class="nx">blacklist</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;logs&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;liveMonitoring&#39;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Never persist these reducers</span>
+<span class="w">  </span><span class="nx">throttle</span><span class="o">:</span><span class="w"> </span><span class="mf">1000</span><span class="w"> </span><span class="c1">// Only persist state once per second maximum</span>
+<span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">persistedReducer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">persistReducer</span><span class="p">(</span><span class="nx">persistConfig</span><span class="p">,</span><span class="w"> </span><span class="nx">rootReducer</span><span class="p">);</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">configureStore</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">persistedReducer</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">middleware</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">thunk</span><span class="p">,</span><span class="w"> </span><span class="nx">apiMiddleware</span><span class="p">,</span><span class="w"> </span><span class="nx">websocketMiddleware</span><span class="p">]</span>
+<span class="p">});</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">persistor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">persistStore</span><span class="p">(</span><span class="nx">store</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structure.html" class="btn btn-neutral float-left" title="Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="styling.html" class="btn btn-neutral float-right" title="Styling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, WIAME EL HAFID, RJILI HOUSSAM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
