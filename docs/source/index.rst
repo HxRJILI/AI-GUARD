@@ -20,7 +20,7 @@ Welcome to AI-GUARD's documentation. This comprehensive guide covers everything 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Docs Contents:
    
    introduction/index
    architecture/index
