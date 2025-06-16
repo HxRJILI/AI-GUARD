@@ -1,57 +1,60 @@
-.. AI GUARD documentation master file, created by
-   sphinx-quickstart on Wed May 21 14:00:19 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-AI GUARD documentation
+AI Guard Documentation
 ======================
 
-.. AI GUARD documentation master file
-
-=====================
-AI-GUARD Documentation
-=====================
-
-.. image:: _static/ai-guard-banner.png
-   :alt: AI-GUARD Banner
-   :align: center
-
-Welcome to AI-GUARD's documentation. This comprehensive guide covers everything you need to know about installing, configuring, and using the AI-GUARD facial recognition security system.
+Welcome to AI Guard's documentation. AI Guard is an intelligent surveillance system designed for educational institutions, featuring real-time facial recognition and multi-user monitoring capabilities.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Docs Contents:
-   
-   introduction/index
-   architecture/index
-   features/index
-   data_models/index
-   database/index
-   frontend/index
-   api/index
-   deployment/index
-   security/index
-   monitoring/index
-   developer/index
-   appendix/index
+   :caption: Getting Started
 
-About AI-GUARD
-=============
+   installation
+   quick-start
 
-AI-GUARD is an advanced security system that leverages artificial intelligence for real-time face detection and recognition. It's designed to enhance physical security in institutional settings by automating the identification of authorized personnel and detecting unauthorized individuals attempting to access secure areas.
+.. toctree::
+   :maxdepth: 2
+   :caption: User Documentation
 
-Quick Start
-==========
+   user-guide
+   api-reference
 
-* :doc:`introduction/overview`
-* :doc:`deployment/requirements`
-* :doc:`deployment/options`
+.. toctree::
+   :maxdepth: 2
+   :caption: Developer Documentation
 
-Indices and tables
-==================
+   architecture
+   development
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :maxdepth: 1
+   :caption: Support
 
+   troubleshooting
+   changelog
 
+Features
+--------
+
+* **Real-time facial recognition** using Dlib ResNet models
+* **Multi-user interface** with role-based access control
+* **Live video streaming** with MJPEG optimization
+* **Real-time alerts** via WebSocket communication
+* **Comprehensive monitoring** with detailed logging
+* **SQLite database** for local data storage
+* **Responsive web interface** with modern design
+
+System Requirements
+-------------------
+
+* Python 3.8+ (Python 3.10 recommended)
+* Webcam or IP camera
+* 8GB RAM minimum (16GB recommended)
+* Modern web browser (Chrome, Firefox, Edge)
+* Windows 10/11, macOS 10.15+, or Ubuntu 18.04+
+
+Quick Links
+-----------
+
+* :doc:`installation` - Install AI Guard on your system
+* :doc:`quick-start` - Get started in 5 minutes
+* :doc:`user-guide` - Complete user documentation
+* :doc:`api-reference` - API and integration guide
